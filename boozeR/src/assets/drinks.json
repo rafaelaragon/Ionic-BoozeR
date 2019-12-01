@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Absolut Vodka",
+    "vol": 40,
+    "img": "absolut_vodka.png",
+    "type": "vodka",
+    "price": 17.5,
+    "favorite": false
+  },
+  {
+    "id": 2,
+    "name": "Ballantine's",
+    "vol": 40,
+    "img": "ballantines.png",
+    "type": "whisky",
+    "price": 15.19,
+    "favorite": false
+  },
+  {
+    "id": 3,
+    "name": "Cacique añejo",
+    "vol": 40,
+    "img": "cacique.png",
+    "type": "ron",
+    "price": 14.44,
+    "favorite": false
+  },
+  {
+    "id": 4,
+    "name": "Campari",
+    "vol": 25,
+    "img": "campari.png",
+    "type": "bitter",
+    "price": 16.12,
+    "favorite": false
+  },
+  {
+    "id": 5,
+    "name": "Jack Daniels",
+    "vol": 40,
+    "img": "jack_daniels.png",
+    "type": "whisky",
+    "price": 23.51,
+    "favorite": false
+  },
+  {
+    "id": 6,
+    "name": "Jägermeister",
+    "vol": 35,
+    "img": "jagermeister.png",
+    "type": "otro",
+    "price": 16.84,
+    "favorite": false
+  },
+  {
+    "id": 7,
+    "name": "Larios Ginebra Mediterránea",
+    "vol": 37.5,
+    "img": "larios.png",
+    "type": "ginebra",
+    "price": 10.65,
+    "favorite": false
+  },
+  {
+    "id": 8,
+    "name": "Martini Vermouth Rosso",
+    "vol": 15,
+    "img": "martini_rosso.png",
+    "type": "vermouth",
+    "price": 7.8,
+    "favorite": false
+  }
+]

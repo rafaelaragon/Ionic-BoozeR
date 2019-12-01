@@ -1,0 +1,52 @@
+ion-content {
+  --ion-background-color: #242424;
+}
+ion-header {
+  --ion-background-color: #242424;
+}
+ion-title {
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+}
+ion-item {
+  margin: 0 auto;
+  margin-top: 0vh;
+}
+ion-searchbar {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+}
+.fav {
+  font-size: 2em;
+}
+ion-img {
+  height: 40vh;
+  margin: auto;
+}
+ion-button {
+  margin: auto;
+}
+div {
+  display: inline-block;
+  height: 75vh;
+}
+.detalles {
+  font-weight: bold;
+  margin: 2vw;
+}
+span {
+  color: white;
+  margin: auto;
+  margin-top: 8vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-size: 1.25em;
+}

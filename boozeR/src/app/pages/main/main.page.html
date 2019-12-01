@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>BoozeR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <ion-searchbar
+    showCancelButton="focus"
+    color="dark"
+    placeholder="Busca..."
+    (input)="searchDrinks()"
+    (ionCancel)="getDrinks()"
+  >
+    <ion-button fill="clear" color="light" (click)="showFilter()">
+      <ion-icon name="color-filter" color="{{selectedColor}}"></ion-icon>
+    </ion-button>
+  </ion-searchbar>
+  <ion-list>
+    <!--Filtro-->
+
+    <!--Filtro por tipo-->
+    <ion-item color="dark" *ngIf="showAdvanced">
+      <ion-label>Tipo</ion-label>
+      <ion-select placeholder="Tipo de bebida" [(ngModel)]="type">
+        <ion-select-option value="">Todos</ion-select-option>
+        <ion-select-option value="whisky">Whisky</ion-select-option>
+        <ion-select-option value="vodka">Vodka</ion-select-option>
+        <ion-select-option value="ron">Ron</ion-select-option>
+        <ion-select-option value="otro">Otro</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!--Filtro por porcentaje de alcohol-->
+    <ion-item color="dark" *ngIf="showAdvanced">
+      <ion-label>Vol.</ion-label>
+      <ion-input
+        color="light"
+        placeholder="Mínimo"
+        min="0"
+        max="100"
+        type="number"
+        [(ngModel)]="min"
+      ></ion-input>
+      <ion-input
+        color="light"
+        placeholder="Máximo"
+        min="0"
+        max="100"
+        type="number"
+        [(ngModel)]="max"
+      ></ion-input>
+    </ion-item>
+    <!--Filtro por precio máximo-->
+    <ion-item color="dark" *ngIf="showAdvanced">
+      <ion-label>Precio máximo por litro: </ion-label>
+      <ion-input
+        color="light"
+        placeholder="Precio(€)"
+        min="0"
+        type="number"
+        [(ngModel)]="precio"
+      ></ion-input
+      >€
+    </ion-item>
+    <!--Filtro por favoritos-->
+    <ion-item color="dark" *ngIf="showAdvanced">
+      Muestra sólo favoritos<ion-icon></ion-icon
+      ><ion-checkbox color="warning"(ionChange)="showOnlyFavorites()"></ion-checkbox>
+    </ion-item>
+    <!--Lista de bebidas-->
+    <div *ngFor="let d of drinks">
+      <ion-icon
+        class="fav"
+        name="star"
+        color="warning"
+        *ngIf="isClicked && drinks[index].id == d.id && d.favorite"
+        (click)="toggleFavorites(d)"
+      ></ion-icon>
+      <ion-icon
+        class="fav"
+        name="star"
+        color="medium"
+        *ngIf="isClicked && drinks[index].id == d.id && !d.favorite"
+        (click)="toggleFavorites(d)"
+      ></ion-icon>
+      <ion-item
+        *ngIf="d.type == type || type == '' && d.vol < max && d.vol > min && d.price <= precio"
+      >
+        <div (click)="showDetails(d.id)">
+          <div class="detalles">
+            <h3>{{ d.name }}</h3>
+            <h4
+              *ngIf="isClicked && drinks[index].id == d.id"
+              style="color: #989aa2;"
+            >
+              {{ d.type }}
+            </h4>
+            <ion-img src="assets/img/{{ d.img }}"></ion-img>
+            <br />
+            <span *ngIf="isClicked && drinks[index].id == d.id">
+              <ion-icon name="beer" color="warning"></ion-icon> {{ d.vol }}%
+            </span>
+            <span *ngIf="isClicked && drinks[index].id == d.id">
+              <ion-icon name="cash" color="success"></ion-icon> {{ d.price }}
+              €/l
+            </span>
+          </div>
+        </div>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>
