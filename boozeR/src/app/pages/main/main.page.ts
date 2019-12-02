@@ -69,7 +69,7 @@ export class MainPage {
 
   async presentAlertConfirm(drink: Drink) {
     const alert = await this.alertController.create({
-      header: 'Eliminar <strong>' + drink.name + '</strong> de favoritos',
+      header: 'Eliminar '  + drink.name + ' de favoritos',
       message: '¿Seguro?',
       buttons: [
         {
@@ -81,6 +81,7 @@ export class MainPage {
           handler: () => {
             this.drinkService.deleteFromFavoriteDrinks(drink);
             console.log(this.drinkService.favoriteDrinks);
+            this.showEverything();
           }
         }
       ]
@@ -89,11 +90,19 @@ export class MainPage {
   }
 
   showOnlyFavorites() {
+    this.isClicked = false;
     if (!this.showFavorites) {
-      this.drinks = this.drinks.filter(fav => fav.favorite);
+      this.drinks = this.drinkService.favoriteDrinks;
     } else if (this.showFavorites) {
       this.drinks = this.copia;
     }
     this.showFavorites = !this.showFavorites;
+  }
+  showEverything() {
+    if (this.showFavorites) {
+      this.drinks = this.drinkService.favoriteDrinks;
+    } else if (!this.showFavorites) {
+      this.drinks = this.copia;
+    }
   }
 }

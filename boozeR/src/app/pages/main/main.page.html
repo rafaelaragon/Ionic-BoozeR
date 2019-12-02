@@ -2,20 +2,26 @@
   <ion-toolbar color="danger">
     <ion-title>BoozeR</ion-title>
   </ion-toolbar>
+  <ion-item>
+      <ion-button class="filter" fill="clear" color="light" (click)="showFilter()">
+          <ion-icon name="color-filter" color="{{selectedColor}}"></ion-icon>
+        </ion-button>
+  </ion-item>
 </ion-header>
 
 <ion-content class="ion-text-center">
+  <!--
   <ion-searchbar
     showCancelButton="focus"
     color="dark"
     placeholder="Busca..."
-    (input)="searchDrinks()"
-    (ionCancel)="getDrinks()"
+    [(ngModel)]="search"
   >
     <ion-button fill="clear" color="light" (click)="showFilter()">
       <ion-icon name="color-filter" color="{{selectedColor}}"></ion-icon>
     </ion-button>
   </ion-searchbar>
+-->
   <ion-list>
     <!--Filtro-->
 
@@ -66,7 +72,10 @@
     <!--Filtro por favoritos-->
     <ion-item color="dark" *ngIf="showAdvanced">
       Muestra sólo favoritos<ion-icon></ion-icon
-      ><ion-checkbox color="warning"(ionChange)="showOnlyFavorites()"></ion-checkbox>
+      ><ion-checkbox
+        color="warning"
+        (ionChange)="showOnlyFavorites()"
+      ></ion-checkbox>
     </ion-item>
     <!--Lista de bebidas-->
     <div *ngFor="let d of drinks">

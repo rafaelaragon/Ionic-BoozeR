@@ -32,7 +32,7 @@ export class DrinkService {
   }
 
   getFavoriteDrinks(): Promise<Drink[]> {
-    return this.storage.get("favorites");
+    return this.storage.get("favoriteDrinks");
   }
 
   addToFavoriteDrinks(drink: Drink): Promise<boolean> {
