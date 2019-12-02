@@ -1,3 +1,3 @@
 # Ionic-BoozeR
-## El objetivo de esta app es ayudarte a elgeir qué beber.
+## El objetivo de esta app es ayudarte a elegir qué beber.
 ![](media/general.gif)
