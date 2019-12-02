@@ -5,9 +5,17 @@
 ### Si seleccionas una bebida en particular, aparecerá una lista de detalles junto a ella:
 - Tipo
 - Graduación de alcohol (Vol.)
-- Precio por litro <br/>
+- Precio por litro 
+<br/><br/>
 ![](media/detalles.gif)
-- Favorita (o no) <br/>
+- Favorita (o no) 
+<br/><br/>
 ![](media/favoritos.gif)
-## Pipo
+## Finalmente, al tocar el icono del cuentagotas, nos aparece un filtro. Actualmente podemos filtrar por:
+- Tipo
+- Graduación Mínima
+- Graduación Máxima
+- Precio Máximo (por litro)
+- Sólo Favoritas (o no)
+<br/><br/>
 ![](media/filtro.gif)
