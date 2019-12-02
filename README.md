@@ -5,9 +5,9 @@
 ### Si seleccionas una bebida en particular, aparecerá una lista de detalles junto a ella:
 - Tipo
 - Graduación de alcohol (Vol.)
-- Precio por litro
+- Precio por litro <br/>
 ![](media/detalles.gif)
-- Favorita (o no)
+- Favorita (o no) <br/>
 ![](media/favoritos.gif)
 ## Pipo
 ![](media/filtro.gif)
