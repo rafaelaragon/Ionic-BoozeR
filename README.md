@@ -1,2 +1,3 @@
 # Ionic-BoozeR
-Esta aplicación te facilita la vida a la hora de elegir qué beber.
+## El objetivo de esta app es ayudarte a elgeir queé beber.
+![](general.gif)
