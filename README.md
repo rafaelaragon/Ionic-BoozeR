@@ -1,3 +1,6 @@
 # Ionic-BoozeR
 ## El objetivo de esta app es ayudarte a elegir qué beber.
-![pipo](media/general.gif)
+![](media/general.gif)
+![](media/detalles.gif)
+![](media/favoritos.gif)
+![](media/filtro.gif)
